@@ -1,0 +1,50 @@
+.App {
+  text-align: center;
+}
+
+body {
+  font: 18px "Trebuchet MS", "Lucida Sans";
+}
+
+.App-header {
+  background-color: gray;
+  height: 50px;
+  color:#150101;
+}
+
+.Content {
+  text-align: center;
+  line-height: 2;
+  color:#150101;  
+}
+
+.Manager {
+ width: 35px;
+ height: 35px;
+ vertical-align: middle;
+}
+
+.circle {
+  list-style-type: none; 
+  text-shadow: 0 1px 0 rgba(255,255,255,.5);
+  display: block;
+  margin: .5em 0;
+  color: #444;
+  transition: .3s ease-out;
+  text-align: center;
+}
+
+.circle a {
+  text-decoration: none;
+  color: black;
+}
+   
+.circle a:hover {
+  background: #E9E4E0;
+}
+
+.back-button:hover {
+  color: black; 
+  background-color: gray;
+}
+
