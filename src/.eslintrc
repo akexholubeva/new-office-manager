@@ -1,0 +1,16 @@
+{
+  "extends": ["eslint-config-airbnb"],
+   "rules": {
+      "indent": ["error", 2],
+      "linebreak-style": ["error", "windows"],
+      "semi": ["error", "always"],
+      "react/prefer-stateless-function": "off",
+      "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+      "react/forbid-prop-types": "off"
+   },
+    "env": {
+      "browser": true,
+      "node": true
+      },
+   "plugins": ["react", "import"]
+}
