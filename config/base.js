@@ -28,7 +28,6 @@ const common = {
             template: 'index.ejs'
         })
     ],
-    
     module:{
         rules: [{
              test: /\.jsx?$/,
