@@ -3,19 +3,20 @@ const path=require('path');
 const HtmlWebpackPlugin=require('html-webpack-plugin');
 
 module.exports = {
-    context: path.resolve(__dirname, './src'),
-    entry: './src/index.js',
+    context: path.resolve(__dirname, 'src'),
+    entry: './index.js',
     output: {
-        path:path.resolve(__dirname, './dist'),
-        filename: './dist/bundle.js',
+        path: path.resolve(__dirname, 'dist'),
+        filename: './bundle.js',
     },
     resolve: {
-        extensions: [".js", ".jsx"]
+        extensions: [".js", ".jsx"],
     },
     plugins:[
         new HtmlWebpackPlugin({
             title:'New office-manager',
-            filename: './dist/index.html',
+            filename: './index.html',
+            template: './index.ejs'
         })
     ],
     

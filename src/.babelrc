@@ -7,12 +7,8 @@
       "loose":true
        }
      }]
-  ]
-  // "env": {
-  //   "development":{
-  //     "plugins":[
-  //       "react-hot-loader"
-  //     ]
-  //   }
-  // }
+  ],
+  "plugins":[
+    "react-hot-loader/babel"
+      ]
 }

@@ -1,5 +1,4 @@
 import React, { PureComponent } from 'react';
-import { Link } from 'react-router-dom';
 import Question from './Question';
 import QuestionData from './Questions.json';
 
@@ -12,9 +11,6 @@ class Questions extends PureComponent {
             <Question key={item.id} data={item} />
           ))}
         </ul>
-        <Link to={'/'}>
-          <button className="back-button">Назад</button>
-        </Link>
       </div>
     );
   }
