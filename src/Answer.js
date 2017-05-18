@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 class Answer extends Component {
   render() {
@@ -16,7 +17,7 @@ class Answer extends Component {
 }
 
 Answer.propTypes = {
-  data: React.PropTypes.object.isRequired,
+  data: PropTypes.object.isRequired,
 };
 
 export default Answer;

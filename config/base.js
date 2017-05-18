@@ -12,7 +12,7 @@ const common = {
     context: dir.source,
     output: {
         path: dir.build,
-        filename: '[name].js',
+        filename: 'bundle.js',
     },
     resolve: {
         extensions: [".js", ".jsx"],
@@ -25,7 +25,7 @@ const common = {
         new HtmlWebpackPlugin({
             title:'New office-manager',
             filename: 'index.html',
-            template: 'index.ejs'
+            template: 'index.ejs',
         })
     ],
     
@@ -44,7 +44,7 @@ const common = {
         }, {
              test: /\.(jpe?g|png|gif)$/,
              exclude: /(node_modules)/,
-             use: 'url-loader?limit=10000'
+             use: 'url-loader?limit=1000'
         }, {
             test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
             use: "file-loader"

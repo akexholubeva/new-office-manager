@@ -4,7 +4,12 @@ const merge=require('webpack-merge');
 
 module.exports= function(env) {
     return merge( common, {
-        entry: 'index.js',
+        entry: [
+            'webpack-dev-server/client?http://localhost:8080',
+            'webpack/hot/only-dev-server',
+            'index.js',
+            ],
+        devtool: 'eval',
         plugins:[
             new webpack.DefinePlugin({
                 'process.env': {
@@ -16,6 +21,7 @@ module.exports= function(env) {
         devServer: {
             hot: true,
             historyApiFallback: true,
+            contentBase: dir.source,
     },
     });
  }
