@@ -4,13 +4,7 @@
    "rules": {
       "import/no-extraneous-dependencies": "off",
       "react/prefer-stateless-function": "off",
-      "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-      "react/forbid-prop-types": "off",
       "space-before-function-paren": "off",
-      "no-unused-vars": "off",
-      "func-names": "off",
-      "global-require": "off",
-      "prefer-template": "off",
       "import/no-dynamic-require": "off"
    },
     "env": {

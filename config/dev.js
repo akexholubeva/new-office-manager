@@ -2,12 +2,12 @@ const webpack = require('webpack');
 const { dir, common } = require('./base');
 const merge = require('webpack-merge');
 
-module.exports = function(env) {
+module.exports = function() {
   return merge(common, {
     entry: [
       'webpack-dev-server/client?http://localhost:8080',
       'webpack/hot/only-dev-server',
-      'index.js',
+      'index.jsx',
     ],
     devtool: 'eval',
     plugins: [

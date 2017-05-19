@@ -14,8 +14,14 @@ class Question extends Component {
   }
 }
 
+React.PropTypes.shape({
+  question: React.PropTypes.string.isRequired,
+  answer: React.PropTypes.string.isRequired,
+  id: React.PropTypes.number.isRequired,
+});
+
 Question.propTypes = {
-  data: PropTypes.object.isRequired,
+  data: PropTypes.shape.isRequired,
 };
 
 export default Question;

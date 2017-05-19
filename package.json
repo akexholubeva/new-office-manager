@@ -2,12 +2,15 @@
   "name": "new-office-manager",
   "version": "1.0.0",
   "description": "Office-manager project, form : question-answer",
-  "main": "index.js",
+  "main": "index.jsx",
   "dependencies": {
     "prop-types": "^15.5.10",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-router-dom": "^4.1.1"
+  },
+  "engines": {
+    "node": ">6.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
