@@ -10,7 +10,6 @@ module.exports=function(env) {
                     'NODE_ENV': JSON.stringify('production')
                 }
             }),
-
         ],
     });
-}
+};

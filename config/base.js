@@ -6,8 +6,7 @@ const dir = {
     source: path.join(__dirname,'..', 'src'),
     build: path.join(__dirname,'..', 'dist'),
     modules: path.join(__dirname,'..', 'node_modules'),
-}
-
+};
 const common = {
     context: dir.source,
     output: {
@@ -19,16 +18,16 @@ const common = {
         modules: [
             dir.modules,
             dir.source
-        ]
+        ],
     },
     plugins:[
         new HtmlWebpackPlugin({
             title:'New office-manager',
             filename: 'index.html',
             template: 'index.ejs',
-        })
+        }),
+        new webpack.optimize.UglifyJsPlugin()
     ],
-    
     module:{
         rules: [{
              test: /\.jsx?$/,
@@ -48,9 +47,8 @@ const common = {
         }, {
             test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
             use: "file-loader"
-        }
-        ],
+        }],
     },
-}
+};
 
-module.exports = {common, dir}
+module.exports = {common, dir};

@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 class Question extends Component {
   render() {
     return (
-      <li className="circle">
+      <li className="list">
         <Link to={`/question/${this.props.data.id}`}>
           {this.props.data.question}
         </Link>
