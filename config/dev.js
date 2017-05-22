@@ -9,7 +9,7 @@ module.exports = function() {
       'webpack/hot/only-dev-server',
       'index.jsx',
     ],
-    devtool: 'eval',
+    devtool: 'source-map',
     plugins: [
       new webpack.DefinePlugin({
         'process.env': {

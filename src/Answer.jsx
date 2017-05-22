@@ -17,7 +17,11 @@ class Answer extends Component {
 }
 
 Answer.propTypes = {
-  data: PropTypes.shape.isRequired,
+  data: PropTypes.shape({
+    question: PropTypes.string.isRequired,
+    answer: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
+  }).isRequired,
 };
 
 export default Answer;
