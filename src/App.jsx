@@ -13,13 +13,23 @@ class App extends Component {
         <div>
           <Header />
           <h2>Manager is ready to help you!</h2>
-          <Route exact path="/" component={Questions} />
+          <Route
+            exact
+            path="/"
+            render={() => (
+              <Questions list={QuestionData} />
+            )}
+          />
           <Route
             path="/question/:questionId"
-            render={({ match }) => (<Answer data={QuestionData.find(item =>
-            item.id.toString() === match.params.questionId)}
-            />
-       )} />
+            render={({ match }) => (
+              <Answer
+                data={QuestionData.find(item => (
+                  item.id.toString() === match.params.questionId
+                ))}
+              />
+            )}
+          />
         </div>
       </Router>
     );

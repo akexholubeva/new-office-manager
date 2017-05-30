@@ -1,13 +1,13 @@
-import React, { PureComponent } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Question from './Question';
-import QuestionData from './Questions.json';
 
-class Questions extends PureComponent {
+class Questions extends Component {
   render() {
     return (
       <div>
         <ul>
-          {QuestionData.map(item => (
+          {this.props.list.map(item => (
             <Question key={item.id} data={item} />
           ))}
         </ul>
@@ -15,5 +15,13 @@ class Questions extends PureComponent {
     );
   }
 }
+
+Questions.propTypes = {
+  list: PropTypes.arrayOf(PropTypes.shape({
+    question: PropTypes.string.isRequired,
+    answer: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
+  })).isRequired,
+};
 
 export default Questions;
