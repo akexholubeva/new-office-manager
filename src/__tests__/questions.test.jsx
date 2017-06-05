@@ -1,6 +1,7 @@
 import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { mount } from 'enzyme';
-import Questions from '../Questions';
+import Questions from '../components/Questions';
 
 describe('<Questions />', () => {
   let output;
@@ -50,12 +51,23 @@ describe('<Questions />', () => {
     id: 3,
   }];
   it('Rendering all questions', () => {
-    output = mount(<Questions list={listOfQuestions} />);
+    output = mount(
+      <Router>
+        <div>
+          <Questions list={listOfQuestions} />,
+        </div>
+      </Router>,
+      );
     expect(output.find('ul li').length).toBe(6);
   });
-  // it('Rendering <li> ', () => {
-  //   output = mount(<Questions list={listOfThreeQuestions} />);
-  //   expect(output.find('ul').children()).to.have.length(3);
-  // });
+  it('Rendering <li> ', () => {
+    output = mount(
+      <Router>
+        <div>
+          <Questions list={listOfThreeQuestions} />,
+        </div>
+      </Router>,
+      );
+    expect(output.find('ul li').length).toBe(3);
+  });
 });
-

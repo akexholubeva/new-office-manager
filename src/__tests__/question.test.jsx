@@ -1,6 +1,7 @@
 import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { mount } from 'enzyme';
-import Question from '../Question';
+import Question from '../components/Question';
 
 describe('<Question />', () => {
   let output;
@@ -10,11 +11,23 @@ describe('<Question />', () => {
     id: 1,
   };
   it('Contain text', () => {
-    output = mount(<Question data={item} />);
+    output = mount(
+      <Router>
+        <div>
+          <Question data={item} />,
+        </div>
+      </Router>,
+    );
     expect(output.text().length).not.toBe(0);
   });
   it('Contain links', () => {
-    output = mount(<Question data={item} />);
-    expect(output.html()).toBe('<li class="list"><a href="/question/1">Как пройти в библиотеку?</a></li>');
+    output = mount(
+      <Router>
+        <div>
+          <Question data={item} />,
+        </div>
+      </Router>,
+    );
+    expect(output.find('li')).toHaveLength(1);
   });
 });

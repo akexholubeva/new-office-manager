@@ -2,7 +2,6 @@
   "name": "new-office-manager",
   "version": "1.0.0",
   "description": "Office-manager project, form : question-answer",
-  "main": "index.jsx",
   "dependencies": {
     "prop-types": "^15.5.10",
     "react": "^15.5.4",
@@ -10,7 +9,8 @@
     "react-router-dom": "^4.1.1"
   },
   "engines": {
-    "node": ">6.0.0"
+    "node": ">6.0.0",
+    "yarn": "0.23.2"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
@@ -47,10 +47,11 @@
     "build": "webpack --env=prod"
   },
   "jest": {
-    "verbose": true,
     "moduleDirectories": [
-      "node_modules",
-      "src"
+      "node_modules"
+    ],
+    "coverageReporters": [
+    "text"
     ],
     "transform": {
     "^.+\\.jsx?$": "babel-jest"

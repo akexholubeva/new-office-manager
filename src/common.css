@@ -8,14 +8,13 @@ h2 {
     text-align: center;  
 }
 
-.App-header {
+.app-header {
   background-color: gray;
-  height: 50px;
   color:#150101;
   text-align: center;  
 }
 
-.Manager {
+.manager {
  width: 35px;
  height: 35px;
  vertical-align: middle;
@@ -40,4 +39,8 @@ h2 {
 .back-button:hover {
   color: black; 
   background-color: gray;
+}
+
+.answer {
+  padding-top: 45px;
 }

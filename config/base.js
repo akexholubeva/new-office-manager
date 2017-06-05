@@ -1,4 +1,3 @@
-const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -26,7 +25,6 @@ const common = {
       filename: 'index.html',
       template: 'index.ejs',
     }),
-    new webpack.optimize.UglifyJsPlugin(),
   ],
   module: {
     rules: [{
@@ -34,6 +32,7 @@ const common = {
       exclude: /node_modules/,
       use: 'babel-loader',
     }, {
+      enforce: 'pre',
       test: /\.jsx?$/,
       exclude: /node_modules/,
       use: 'eslint-loader',
