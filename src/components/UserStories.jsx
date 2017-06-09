@@ -1,22 +1,22 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Question from './Question';
+import UserStory from './UserStory';
 import { QuestionType } from '../types';
 
-class Questions extends Component {
+class UserStories extends Component {
   render() {
     return (
       <ul>
         {this.props.list.map(item => (
-          <Question key={item.id} data={item} />
+          <UserStory key={item.id} data={item} />
         ))}
       </ul>
     );
   }
 }
 
-Questions.propTypes = {
+UserStories.propTypes = {
   list: PropTypes.arrayOf(QuestionType).isRequired,
 };
 
-export default Questions;
+export default UserStories;
