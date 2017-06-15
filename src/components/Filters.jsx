@@ -7,13 +7,15 @@ class Filters extends Component {
   onAddressChanged = (event) => {
     const addresses = ['lermonatova', 'abc', 'neman'];
     this.setState({ tags: [
-      ...this.state.tags.filter((item => !addresses.includes(item))).concat(event.target.value),
+      ...this.state.tags.splice(0, 0).filter((item =>
+      !addresses.includes(item))).concat(event.target.value),
     ] });
   }
   onTimeChanged = (e) => {
     const time = ['before20', 'after20'];
     this.setState({ tags: [
-      ...this.state.tags.filter((item => !time.includes(item))).concat(e.target.value),
+      ...this.state.tags.filter((item =>
+       !time.includes(item))).concat(e.target.value),
     ] });
   }
   render () {
@@ -21,7 +23,7 @@ class Filters extends Component {
       <form className="filters">
         <p>Выберите Ваш офис</p>
         <p>
-          <label htmlFor="address1"><input name="office" type="radio" value="lermontova" onChange={this.onAddressChanged}id="address1" />ул.Лермонтова 29</label>
+          <label htmlFor="address1"><input name="office" type="radio" value="lermontova" onChange={this.onAddressChanged} id="address1" />ул.Лермонтова 29</label>
           <label htmlFor="address2"><input name="office" type="radio" value="abc" onChange={this.onAddressChanged} id="address2" />ТЦ ABC</label>
           <label htmlFor="address3"><input name="office" type="radio" value="neman" onChange={this.onAddressChanged} id="address3" />ТД Неман</label>
         </p>
