@@ -1,20 +1,21 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { mount } from 'enzyme';
-import Question from '../components/Question';
+import UserStory from '../components/UserStory';
 
-describe('<Question />', () => {
+describe('<UserStory />', () => {
   let output;
   const item = {
-    question: 'Как пройти в библиотеку?',
-    answer: 'Выйти из кабинета и следовать желтым стрелочкам',
+    userStory: 'Я хочу выйти из офиса по улице Лермонтова и я последний в офисе',
+    answer: 'Следуйте инструкции, которая висит около выхода',
     id: 1,
+    tags: ['lermontova', 'before20', 'after20'],
   };
   it('Contain text', () => {
     output = mount(
       <Router>
         <div>
-          <Question data={item} />,
+          <UserStory data={item} />,
         </div>
       </Router>,
     );
@@ -24,7 +25,7 @@ describe('<Question />', () => {
     output = mount(
       <Router>
         <div>
-          <Question data={item} />,
+          <UserStory data={item} />,
         </div>
       </Router>,
     );

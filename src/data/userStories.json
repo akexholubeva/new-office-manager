@@ -2,50 +2,50 @@
   "userStory":"Я хочу выйти из офиса по улице Лермонтова и я последний в офисе",
   "answer":"Следуйте инструкции, которая висит около выхода",
   "id":1,
-  "address":"lermontova"
+  "tags": ["lermontova", "before20", "after20"]
 },{
 "userStory":"Я хочу выйти из офиса ТЦ АВС до 20-00",
   "answer":"Вы можете свободно выйти из офиса",
   "id":2,
-  "address":"abc"
+  "tags":["abc", "before20"]
 },{
 "userStory":"Я хочу выйти из офиса ТД Неман до 20:00",
   "answer":"Вы можете свободно выйти из офиса",
   "id":3,
-  "address":"neman"
+  "tags":["neman", "before20"]
 },{
 "userStory":"Я хочу выйти из офиса ТЦ АВС после 20-00",
   "answer":"Обратитесь к охраннику ТЦ",
   "id":4,
-  "address":"abc"
+  "tags":["abc", "after20"]
 },{
 "userStory":"Я хочу в туалет по ул. Лермонтова",
   "answer":"На 3-ем этаже есть общий туалет около лестницы, на 2-ом  есть раздельные туалеты около выхода во двор.",
   "id":5,
-  "address":"lermontova"
+  "tags": ["lermontova", "before20", "after20"]
 },{
 "userStory":"Я хочу в туалет ТЦ АВС",
   "answer":"На 3-ем этаже есть раздельные туалеты в конце коридора",
   "id":6,
-  "address":"abc"
+  "tags":["abc", "before20", "after20"]
 },{
 "userStory":"Я хочу в туалет ТЦ Неман",
   "answer":"Туалет в конце коридора",
   "id":7,
-  "address":"neman"
+  "tags":["neman", "before20", "after20"]
 },{
 "userStory":"Я хочу подключить Wi-Fi, мой MAC-адрес внесён в базу компании",
   "answer":"Проверьте настройки Вашего девайса",
   "id":8,
-  "address":"lermontova||neman||abc"
+  "tags":["lermontova","neman","abc", "before20", "after20"]
 },{
 "userStory":"Я хочу подключить Wi-Fi, но мой MAC-адрес не внесён в базу компании",
   "answer":"Обратитесь к сисадмину компании",
   "id":9,
-  "address":"lermontova||neman||abc"
+  "tags": ["lermontova", "neman","abc", "before20", "after20"]
 },{
 "userStory":"Я хочу попасть в аптеку из офиса по ул. Лермонтова",
   "answer":"Ближайшая аптека по ул.  Калиновского 1, направляйтесь к зданию гостиницы Беларусь",
   "id":10,
-  "address":"lermontova"
+  "tags": ["lermontova", "before20", "after20"]
 }]

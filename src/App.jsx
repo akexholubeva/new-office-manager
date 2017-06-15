@@ -4,8 +4,7 @@ import './common.css';
 import Header from './components/Header';
 import UserStories from './components/UserStories';
 import Answer from './components/Answer';
-import RadioButtons from './components/RadioButtons';
-// import QuestionData from './data/questions.json';
+import Filters from './components/Filters';
 import userStoriesData from './data/userStories.json';
 
 class App extends Component {
@@ -13,7 +12,7 @@ class App extends Component {
     return (
       <div>
         <Header />
-        <RadioButtons />
+        <Filters />
         <Router>
           <div>
             <Route

@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { mount } from 'enzyme';
-import Questions from '../components/Questions';
+import UserStories from '../components/UserStories';
 
-describe('<Questions />', () => {
+describe('<UserStories />', () => {
   let output;
   const listOfQuestions = [{
     question: 'Как пройти в библиотеку?',
@@ -54,7 +54,7 @@ describe('<Questions />', () => {
     output = mount(
       <Router>
         <div>
-          <Questions list={listOfQuestions} />,
+          <UserStories list={listOfQuestions} />,
         </div>
       </Router>,
       );
@@ -64,7 +64,7 @@ describe('<Questions />', () => {
     output = mount(
       <Router>
         <div>
-          <Questions list={listOfThreeQuestions} />,
+          <UserStories list={listOfThreeQuestions} />,
         </div>
       </Router>,
       );
