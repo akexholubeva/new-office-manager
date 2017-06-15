@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 
 class Filters extends Component {
   state = {
-    tags: ['lermonatova', 'abc', 'neman', 'before20', 'after20'],
+    tags: ['lermontova', 'abc', 'neman', 'before20', 'after20'],
   };
   onAddressChanged = (event) => {
-    const addresses = ['lermonatova', 'abc', 'neman'];
+    const addresses = ['lermontova', 'abc', 'neman'];
     this.setState({ tags: [
-      ...this.state.tags.splice(0, 0).filter((item =>
+      ...this.state.tags.filter((item =>
       !addresses.includes(item))).concat(event.target.value),
     ] });
   }
