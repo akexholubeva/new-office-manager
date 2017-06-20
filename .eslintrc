@@ -6,10 +6,13 @@
       "react/prefer-stateless-function": "off",
       "space-before-function-paren": "off",
       "import/no-dynamic-require": "off",
-      "func-names":"off"
+      "func-names": "off",
+      "react/prop-types": "off",
+      "no-console": "off"
    },
     "env": {
       "browser": true,
       "jest": true
       }
 }
+ 

@@ -9,7 +9,7 @@ class UserStories extends Component {
       <ul>
         {this.props.list.map(item => (
           <UserStory key={item.id} data={item} />
-        ))}
+        ))};
       </ul>
     );
   }

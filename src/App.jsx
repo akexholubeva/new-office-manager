@@ -8,6 +8,12 @@ import Filters from './components/Filters';
 import userStoriesData from './data/userStories.json';
 
 class App extends Component {
+  state = {
+    tags: ['lermontova', 'abc', 'neman', 'before20', 'after20'],
+  };
+  FilterChanged = () => {
+    console.log();
+  }
   render() {
     return (
       <div>
