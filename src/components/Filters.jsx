@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Filters extends Component {
   state = {
@@ -6,15 +7,23 @@ class Filters extends Component {
   };
   onAddressChanged = (event) => {
     const addresses = ['lermontova', 'abc', 'neman'];
-    this.setState(({ tags: [
-      ...this.state.tags.filter((item => !addresses.includes(item))), event.target.value,
-    ] }, () => this.props.FilterChanged(this.state.tags)));
+    const newTags = [
+      ...this.state.tags.filter((item => !addresses.includes(item))),
+      event.target.value,
+    ];
+    this.setState({ tags: newTags }, () => {
+      this.props.onFilterChange(newTags);
+    });
   }
   onTimeChanged = (event) => {
     const time = ['before20', 'after20'];
-    this.setState({ tags: [
-      ...this.state.tags.filter((item => !time.includes(item))), event.target.value,
-    ] }, () => this.props.FilterChanged(this.state.tags));
+    const newTags = [
+      ...this.state.tags.filter((item => !time.includes(item))),
+      event.target.value,
+    ];
+    this.setState({ tags: newTags }, () => {
+      this.props.onFilterChange(newTags);
+    });
   }
   render () {
     return (
@@ -46,5 +55,9 @@ class Filters extends Component {
     );
   }
 }
+
+Filters.propTypes = {
+  onFilterChange: PropTypes.func.isRequired,
+};
 
 export default Filters;
