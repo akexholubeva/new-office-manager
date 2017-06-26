@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import './common.css';
 import Header from './components/Header';
 import UserStories from './components/UserStories';
@@ -8,11 +9,23 @@ import Filters from './components/Filters';
 import userStoriesData from './data/userStories.json';
 
 class App extends Component {
-  onFilterChange = (tags) => {
-    console.log(tags);
+  constructor(props) {
+    super(props);
+    this.state = { userStoriesData };
   }
-
+  onFilterChange = (tags) => {
+    this.setState({ userStoriesData: userStoriesData.filter((item) => {
+      let matchCount = 0;
+      item.tags.forEach((element) => {
+        if (tags.includes(element)) { matchCount += 1; }
+      });
+      if (matchCount === tags.length) { return true; }
+      return false;
+    }),
+    });
+  }
   render() {
+    const { userStoriesData: userStories } = this.state;
     return (
       <div>
         <Header />
@@ -23,7 +36,7 @@ class App extends Component {
               exact
               path="/"
               render={() => (
-                <UserStories list={userStoriesData} />
+                <UserStories list={userStories} />
               )}
             />
             <Route
@@ -42,5 +55,9 @@ class App extends Component {
     );
   }
 }
+
+Filters.propTypes = {
+  onFilterChange: PropTypes.func.isRequired,
+};
 
 export default App;
