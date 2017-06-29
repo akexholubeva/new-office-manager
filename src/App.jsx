@@ -15,17 +15,22 @@ class App extends Component {
   }
   onFilterChange = (tags) => {
     this.setState({ userStoriesData: userStoriesData.filter((item) => {
+      console.log(tags);
       let matchCount = 0;
       item.tags.forEach((element) => {
-        if (tags.includes(element)) { matchCount += 1; }
+        if (tags.includes(element)) {
+          matchCount += 1;
+        }
       });
-      if (matchCount === tags.length) { return true; }
+      if (matchCount === tags.length) {
+        return true;
+      }
       return false;
-    }),
-    });
+    }) });
   }
   render() {
     const { userStoriesData: userStories } = this.state;
+    console.log(userStories);
     return (
       <div>
         <Header />

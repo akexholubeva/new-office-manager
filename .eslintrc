@@ -8,8 +8,7 @@
       "import/no-dynamic-require": "off",
       "func-names": "off",
       "react/prop-types": "off",
-      "no-console": "off",
-      "react/no-did-mount-set-state": "off"
+      "no-console": "off"
    },
     "env": {
       "browser": true,
