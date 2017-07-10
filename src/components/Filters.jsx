@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 class Filters extends Component {
   state = {
-    tags: ['lermontova', 'abc', 'neman', 'before20', 'after20'],
+    tags: [],
   };
   onAddressChanged = (event) => {
     const addresses = ['lermontova', 'abc', 'neman'];
@@ -28,27 +28,22 @@ class Filters extends Component {
   render () {
     return (
       <div>
-        <form className="filters">
+        <form className="radio">
           <p>Выберите Ваш офис</p>
           <p>
-            <label htmlFor="address1">
-              <input name="office" type="radio" value="lermontova" onChange={this.onAddressChanged} id="address1" />ул.Лермонтова 29
-            </label>
-            <label htmlFor="address2">
-              <input name="office" type="radio" value="abc" onChange={this.onAddressChanged} id="address2" />ТЦ ABC
-            </label>
-            <label htmlFor="address3">
-              <input name="office" type="radio" value="neman" onChange={this.onAddressChanged} id="address3" />ТД Неман
-            </label>
+            <input name="office" type="radio" value="lermontova" onChange={this.onAddressChanged} id="address1" />
+            <label htmlFor="address1" className="label">ул.Лермонтова 29</label>
+            <input name="office" type="radio" value="abc" onChange={this.onAddressChanged} id="address2" />
+            <label htmlFor="address2" className="label">ТЦ ABC</label>
+            <input name="office" type="radio" value="neman" onChange={this.onAddressChanged} id="address3" />
+            <label htmlFor="address3" className="label">ТД Неман</label>
           </p>
           <p>Выберите время</p>
           <p>
-            <label htmlFor="time1">
-              <input name="time" type="radio" value="before20" onChange={this.onTimeChanged} id="time1" />до 20:00
-            </label>
-            <label htmlFor="time2">
-              <input name="time" type="radio" value="after20" onChange={this.onTimeChanged} id="time2" />после 20:00
-            </label>
+            <input name="time" type="radio" value="before20" onChange={this.onTimeChanged} id="time1" />
+            <label htmlFor="time1" className="label">до 20:00</label>
+            <input name="time" type="radio" value="after20" onChange={this.onTimeChanged} id="time2" />
+            <label htmlFor="time2" className="label">после 20:00</label>
           </p>
         </form>
       </div>

@@ -13,20 +13,12 @@ class App extends Component {
     super(props);
     this.state = { userStoriesData };
   }
+
   onFilterChange = (tags) => {
-    this.setState({ userStoriesData: userStoriesData.filter((item) => {
-      console.log(tags);
-      let matchCount = 0;
-      item.tags.forEach((element) => {
-        if (tags.includes(element)) {
-          matchCount += 1;
-        }
-      });
-      if (matchCount === tags.length) {
-        return true;
-      }
-      return false;
-    }) });
+    this.setState({ userStoriesData: userStoriesData.filter((item =>
+      tags.every(element => item.tags.includes(element))
+    )) },
+    );
   }
   render() {
     const { userStoriesData: userStories } = this.state;
@@ -49,8 +41,8 @@ class App extends Component {
               render={({ match }) => (
                 <Answer
                   data={userStoriesData.find(item => (
-                    item.id.toString() === match.params.questionId
-                  ))}
+                  item.id.toString() === match.params.questionId
+                ))}
                 />
               )}
             />

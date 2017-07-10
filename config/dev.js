@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const { dir, common } = require('./base');
 const merge = require('webpack-merge');
+const path = require('path');
 
 module.exports = function() {
   return merge(common, {
@@ -9,6 +10,11 @@ module.exports = function() {
       'webpack/hot/only-dev-server',
       'index.jsx',
     ],
+    output: {
+      filename: '[name].js',
+      path: path.join(__dirname, 'dev'),
+      publicPath: 'http://localhost:8080/',
+    },
     devtool: 'source-map',
     plugins: [
       new webpack.DefinePlugin({

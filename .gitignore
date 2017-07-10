@@ -1,3 +1,6 @@
 dist
 node_modules
 coverage
+filters.test.jsx
+config/prod/
+
