@@ -1,0 +1,15 @@
+{
+  "extends": ["eslint-config-airbnb"],
+  "parser": "babel-eslint",
+   "rules": {
+      "import/no-extraneous-dependencies": "off",
+      "react/prefer-stateless-function": "off",
+      "space-before-function-paren": "off",
+      "import/no-dynamic-require": "off",
+      "func-names":"off"
+   },
+    "env": {
+      "browser": true,
+      "jest": true
+      }
+}

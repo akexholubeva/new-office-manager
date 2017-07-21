@@ -1,45 +1,37 @@
-.App {
-  text-align: center;
-}
-
 body {
   font: 18px "Trebuchet MS", "Lucida Sans";
-}
-
-.App-header {
-  background-color: gray;
-  height: 50px;
-  color:#150101;
-}
-
-.Content {
-  text-align: center;
   line-height: 2;
-  color:#150101;  
+  text-align: center;
 }
 
-.Manager {
+h2 {
+    text-align: center;  
+}
+
+.app-header {
+  background-color: gray;
+  color:#150101;
+  text-align: center;  
+}
+
+.manager {
  width: 35px;
  height: 35px;
  vertical-align: middle;
 }
 
-.circle {
+.list {
   list-style-type: none; 
-  text-shadow: 0 1px 0 rgba(255,255,255,.5);
-  display: block;
   margin: .5em 0;
   color: #444;
-  transition: .3s ease-out;
-  text-align: center;
 }
 
-.circle a {
+.list a {
   text-decoration: none;
   color: black;
 }
    
-.circle a:hover {
+.list a:hover {
   background: #E9E4E0;
 }
 
@@ -47,3 +39,4 @@ body {
   color: black; 
   background-color: gray;
 }
+
