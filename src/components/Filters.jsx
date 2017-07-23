@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { TIMES, ADDRESSES } from '../data/constants';
 
 class Filters extends Component {
   state = {
     tags: [],
   };
   onAddressChanged = (event) => {
-    const addresses = ['lermontova', 'abc', 'neman'];
     const newTags = [
-      ...this.state.tags.filter((item => !addresses.includes(item))),
+      ...this.state.tags.filter((item => !ADDRESSES.includes(item))),
       event.target.value,
     ];
     this.setState({ tags: newTags }, () => {
@@ -16,9 +16,8 @@ class Filters extends Component {
     });
   }
   onTimeChanged = (event) => {
-    const time = ['before20', 'after20'];
     const newTags = [
-      ...this.state.tags.filter((item => !time.includes(item))),
+      ...this.state.tags.filter((item => !TIMES.includes(item))),
       event.target.value,
     ];
     this.setState({ tags: newTags }, () => {

@@ -2,6 +2,7 @@ body {
   font: 20px "Trebuchet MS", "Lucida Sans";
   line-height: 2;
   text-align: center;
+  overflow-y: scroll;
 }
 
 .app-header {
@@ -15,9 +16,9 @@ body {
 }
 
 .manager {
- width: 35px;
- height: 35px;
- vertical-align: middle;
+  width: 35px;
+  height: 35px;
+  vertical-align: middle;
 }
 
 .list {
@@ -47,15 +48,15 @@ body {
 }
 
 .list li {
-padding: 10px 15px;
-border-radius: 5px;
-border-left: 10px solid #f05d22; 
-box-shadow: 2px -2px 5px 0 rgba(0,0,0,.1),
-    -2px -2px 5px 0 rgba(0,0,0,.1),
-    2px 2px 5px 0 rgba(0,0,0,.1),
-    -2px 2px 5px 0 rgba(0,0,0,.1);
-letter-spacing: 2px;
-transition: 0.3s;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border-left: 10px solid #f05d22; 
+  box-shadow: 2px -2px 5px 0 rgba(0,0,0,.1),
+      -2px -2px 5px 0 rgba(0,0,0,.1),
+      2px 2px 5px 0 rgba(0,0,0,.1),
+      -2px 2px 5px 0 rgba(0,0,0,.1);
+  letter-spacing: 2px;
+  transition: 0.3s;
 }
 
 .list li:nth-child(2){border-color: #8bc63e;}
@@ -82,31 +83,11 @@ transition: 0.3s;
 .list li:nth-child(10):hover {border-right: 10px solid #6B9B00;}
 
 label {
-	cursor: pointer;
-  padding-left: 25px;
-	margin-right: 25px;
-}
-
-input[type=radio]+label:before{
-  visibility: visible;
-  border-radius: 50px;
-  height:16px;
-  width:16px;
-  margin-right: 2px;
-  display:inline-block;
-  vertical-align: baseline;
-  border:1px solid #777;
+  padding-left: 10px;
+	margin-right: 10px;
 }
 
 input[type="radio"] {
-  display: none;
+  height:16px;
+  width:16px;
 }
-
-input[type=radio]:checked + .label:before {
-  content: "\2022";
-  color: #f3f3f3;
-  line-height: 16px;
-	background-color: #C7C1A8;
-	box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);
-}
-

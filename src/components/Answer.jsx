@@ -8,9 +8,9 @@ class Answer extends Component {
   render() {
     return (
       <div className="answer">
-        <li>{this.props.data.userStory}</li>
+        <p>{this.props.data.userStory}</p>
         <img className="arrow" alt="arrow1" src={arrowIcon} />
-        <li>{this.props.data.answer}</li>
+        <p>{this.props.data.answer}</p>
         <Link to={'/'}>
           <button className="back-button">Назад</button>
         </Link>

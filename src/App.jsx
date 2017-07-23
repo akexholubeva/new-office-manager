@@ -22,7 +22,6 @@ class App extends Component {
   }
   render() {
     const { userStoriesData: userStories } = this.state;
-    console.log(userStories);
     return (
       <div>
         <Header />
