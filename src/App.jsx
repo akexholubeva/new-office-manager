@@ -21,7 +21,6 @@ class App extends Component {
     );
   }
   render() {
-    const { userStoriesData: userStories } = this.state;
     return (
       <div>
         <Header />
@@ -32,7 +31,7 @@ class App extends Component {
               exact
               path="/"
               render={() => (
-                <UserStories list={userStories} />
+                <UserStories list={this.state.userStoriesData} />
               )}
             />
             <Route
