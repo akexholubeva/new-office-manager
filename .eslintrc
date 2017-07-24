@@ -3,12 +3,11 @@
   "parser": "babel-eslint",
   "rules": {
     "import/no-extraneous-dependencies": "off",
-    "react/prefer-stateless-function": "off",
-    "space-before-function-paren": "off"
+    "react/prefer-stateless-function": "off"
   },
   "env": {
     "browser": true,
     "jest": true
   }
 }
- 
+

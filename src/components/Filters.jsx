@@ -24,7 +24,7 @@ class Filters extends Component {
       this.props.onFilterChange(newTags);
     });
   }
-  render () {
+  render() {
     return (
       <div>
         <form className="radio">
