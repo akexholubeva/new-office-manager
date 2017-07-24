@@ -1,38 +1,57 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { TIMES, ADDRESSES } from '../data/constants';
 
 class Filters extends Component {
   state = {
-    tags: ['lermonatova', 'abc', 'neman', 'before20', 'after20'],
+    tags: [],
   };
   onAddressChanged = (event) => {
-    const addresses = ['lermonatova', 'abc', 'neman'];
-    this.setState({ tags: [
-      ...this.state.tags.filter((item => !addresses.includes(item))).concat(event.target.value),
-    ] });
+    const newTags = [
+      ...this.state.tags.filter((item => !ADDRESSES.includes(item))),
+      event.target.value,
+    ];
+    this.setState({ tags: newTags }, () => {
+      this.props.onFilterChange(newTags);
+    });
   }
-  onTimeChanged = (e) => {
-    const time = ['before20', 'after20'];
-    this.setState({ tags: [
-      ...this.state.tags.filter((item => !time.includes(item))).concat(e.target.value),
-    ] });
+  onTimeChanged = (event) => {
+    const newTags = [
+      ...this.state.tags.filter((item => !TIMES.includes(item))),
+      event.target.value,
+    ];
+    this.setState({ tags: newTags }, () => {
+      this.props.onFilterChange(newTags);
+    });
   }
-  render () {
+  render() {
     return (
-      <form className="filters">
-        <p>Выберите Ваш офис</p>
-        <p>
-          <label htmlFor="address1"><input name="office" type="radio" value="lermontova" onChange={this.onAddressChanged}id="address1" />ул.Лермонтова 29</label>
-          <label htmlFor="address2"><input name="office" type="radio" value="abc" onChange={this.onAddressChanged} id="address2" />ТЦ ABC</label>
-          <label htmlFor="address3"><input name="office" type="radio" value="neman" onChange={this.onAddressChanged} id="address3" />ТД Неман</label>
-        </p>
-        <p>Выберите Время</p>
-        <p>
-          <label htmlFor="time1"><input name="time" type="radio" value="before20" onChange={this.onTimeChanged} id="time1" />до 20:00</label>
-          <label htmlFor="time2"><input name="time" type="radio" value="after20" onChange={this.onTimeChanged} id="time2" />после 20:00</label>
-        </p>
-      </form>
+      <div>
+        <form className="radio">
+          <p>Выберите Ваш офис</p>
+          <p>
+            <input name="office" type="radio" value="lermontova" onChange={this.onAddressChanged} id="address1" />
+            <label htmlFor="address1" className="label">ул.Лермонтова 29</label>
+            <input name="office" type="radio" value="abc" onChange={this.onAddressChanged} id="address2" />
+            <label htmlFor="address2" className="label">ТЦ ABC</label>
+            <input name="office" type="radio" value="neman" onChange={this.onAddressChanged} id="address3" />
+            <label htmlFor="address3" className="label">ТД Неман</label>
+          </p>
+          <p>Выберите время</p>
+          <p>
+            <input name="time" type="radio" value="before20" onChange={this.onTimeChanged} id="time1" />
+            <label htmlFor="time1" className="label">до 20:00</label>
+            <input name="time" type="radio" value="after20" onChange={this.onTimeChanged} id="time2" />
+            <label htmlFor="time2" className="label">после 20:00</label>
+          </p>
+        </form>
+      </div>
     );
   }
 }
+
+Filters.propTypes = {
+  onFilterChange: PropTypes.func.isRequired,
+};
 
 export default Filters;

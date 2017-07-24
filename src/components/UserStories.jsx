@@ -6,7 +6,7 @@ import { QuestionType } from '../types';
 class UserStories extends Component {
   render() {
     return (
-      <ul>
+      <ul className="list">
         {this.props.list.map(item => (
           <UserStory key={item.id} data={item} />
         ))}

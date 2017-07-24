@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import managerIcon from '../../asserts/img/manager.png';
 
-class Header extends Component {
+class Header extends PureComponent {
   render() {
     return (
       <div className="app-header">

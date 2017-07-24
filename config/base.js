@@ -42,7 +42,7 @@ const common = {
     }, {
       test: /\.(jpe?g|png|gif)$/,
       exclude: /(node_modules)/,
-      use: 'url-loader?limit=1000',
+      use: 'file-loader',
     }, {
       test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
       use: 'file-loader',
